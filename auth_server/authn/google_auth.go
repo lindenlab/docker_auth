@@ -35,6 +35,7 @@ import (
 	"github.com/cesanta/docker_auth/auth_server/authn/tokenstore"
 	"github.com/cesanta/docker_auth/auth_server/authn/tokenstore/factory"
 	"github.com/cesanta/docker_auth/auth_server/authn/tokenstore/leveldb"
+	_ "github.com/cesanta/docker_auth/auth_server/authn/tokenstore/redis"
 )
 
 type GoogleAuthConfig struct {

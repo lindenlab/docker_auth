@@ -53,7 +53,21 @@ google_auth:
   client_secret_file: "/path/to/client_secret.txt"
   # Where to store server tokens. Required.
   token_store:
-    leveldb: "/somewhere/to/put/google_tokens.ldb"
+    # Choose one of: leveldb or redis
+    #leveldb: "/somewhere/to/put/google_tokens.ldb"
+    redis:
+      # Only 'addr' is required.
+      addr: my.redis.server:6379
+      #password: mypass
+      #db: 1
+      #timeout:
+      #  dial: 60
+      #  read: 15
+      #  write: 30
+      #  idle: 600
+      #pool:
+      #  maxidle: 10
+      #  maxactive: 5 
   # How long to wait when talking to Google servers. Optional.
   http_timeout: 10
 
